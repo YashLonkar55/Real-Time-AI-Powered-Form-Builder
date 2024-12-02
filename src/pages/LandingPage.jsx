@@ -19,7 +19,7 @@ const LandingPage = () => {
             Get real-time responses and AI-powered insights.
           </p>
           <Link
-            to="/create"
+            to="/Register"
             className="inline-block bg-indigo-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-indigo-700 transition-colors"
           >
             Get Started Free

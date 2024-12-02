@@ -21,11 +21,11 @@ const Navbar = () => {
           </div>
           
           <div className="hidden sm:ml-6 sm:flex sm:items-center">
-            <Link to="/dashboard" className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-gray-900">
-              Dashboard
+            <Link to="/Login" className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-gray-900">
+              Sign In
             </Link>
-            <Link to="/create" className="ml-4 px-4 py-2 rounded-md text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700">
-              Create Form
+            <Link to="/Register" className="ml-4 px-4 py-2 rounded-md text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700">
+              Register
             </Link>
           </div>
         </div>

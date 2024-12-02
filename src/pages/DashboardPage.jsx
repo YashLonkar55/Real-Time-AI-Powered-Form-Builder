@@ -1,12 +1,20 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import FormCard from '../components/dashboard/FormCard';
 import QuickStats from '../components/dashboard/QuickStats';
 import { getForms } from '../utils/formStorage';
 
 const DashboardPage = () => {
   const [forms, setForms] = useState([]);
+  const navigate = useNavigate();
+
+  const handleViewForm = (form) => {
+    localStorage.setItem('previewForm', JSON.stringify(form));
+    navigate(`/form/${form.id}/responses`);
+  };
+
+
 
   useEffect(() => {
     const savedForms = getForms();
@@ -53,9 +61,13 @@ const DashboardPage = () => {
         </motion.div>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {forms.map(form => (
-            <FormCard key={form.id} form={form} />
-          ))}
+            {forms.map(form => (
+            <FormCard 
+              key={form.id} 
+              form={form} 
+              onView={() => handleViewForm(form)}
+            />
+            ))}
         </div>
       )}
     </div>

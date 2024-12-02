@@ -26,12 +26,15 @@ const FormCard = ({ form }) => {
           </div>
         </div>
         <div className="flex space-x-2">
-          <Link to={`/form/${form.id}/edit`} className="text-indigo-600 hover:text-indigo-800">
+            <Link to={`/form/${form.id}/edit`} className="text-indigo-600 hover:text-indigo-800">
             Edit
-          </Link>
-          <Link to={`/form/${form.id}/responses`} className="text-indigo-600 hover:text-indigo-800">
-            View Responses
-          </Link>
+            </Link>
+            <Link to={`/preview/${form.id}`} className="text-indigo-600 hover:text-indigo-800">
+            Preview
+            </Link>
+            <Link to={`/form/${form.id}/responses`} className="text-indigo-600 hover:text-indigo-800">
+            Responses
+            </Link>
         </div>
       </div>
     </motion.div>
